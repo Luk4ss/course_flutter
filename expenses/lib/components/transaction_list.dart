@@ -6,6 +6,8 @@ import '../models/transaction.dart';
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
 
+  static int NUMERO_DE_CASAS_DECIMAIS = 2;
+
   TransactionList(this.transactions);
 
   @override
@@ -27,7 +29,7 @@ class TransactionList extends StatelessWidget {
                 decoration: BoxDecoration(
                     border: Border.all(color: Colors.purple, width: 2)),
                 padding: const EdgeInsets.all(10),
-                child: Text('R\$ ${tr.value.toStringAsFixed(2)}',
+                child: Text('R\$ ${tr.value.toStringAsFixed(NUMERO_DE_CASAS_DECIMAIS)}',
                     style: const TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 20,
