@@ -24,22 +24,24 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text('Despesas Pessoais')),
-        body: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            Container(
-              margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
-              decoration: BoxDecoration(
-                  border: Border.all(color: Colors.black, width: 2)),
-              padding: const EdgeInsets.all(10),
-              child: const Card(
-                color: Colors.blue,
-                elevation: 5,
-                child: Text('Gráfico'),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+                decoration: BoxDecoration(
+                    border: Border.all(color: Colors.black, width: 2)),
+                padding: const EdgeInsets.all(10),
+                child: const Card(
+                  color: Colors.blue,
+                  elevation: 5,
+                  child: Text('Gráfico'),
+                ),
               ),
-            ),
-            TransactionUser()     
-          ],
+              TransactionUser()     
+            ],
+          ),
         ));
   }
 }
