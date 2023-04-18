@@ -43,7 +43,7 @@ class TransactionList extends StatelessWidget {
                   Text(
                     tr.title,
                     style: const TextStyle(
-                        fontSize: 16, fontWeight: FontWeight.bold),
+                        fontSize: 16, fontWeight: FontWeight.bold)
                   ),
                   Text(DateFormat('d MMM y').format(tr.date),
                       style: const TextStyle(color: Colors.grey))

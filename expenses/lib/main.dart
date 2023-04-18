@@ -1,5 +1,5 @@
 
-import 'package:expenses/components/transaction_form.dart';
+
 import 'package:flutter/material.dart';
 import 'components/transaction_form.dart';
 import 'components/transaction_list.dart';
@@ -25,7 +25,7 @@ class ExpensesApp extends StatelessWidget {
         ),
       textTheme: tema.textTheme.copyWith(
         titleMedium: const TextStyle(
-          fontFamily: 'OpenSans',
+          fontFamily: 'Quicksand',
           fontSize: 18,
           fontWeight: FontWeight.bold,
           color: Colors.black
