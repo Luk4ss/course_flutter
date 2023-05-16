@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 
 class TransactionForm extends StatefulWidget {
 
-  final void Function(String, double) onSubmit;
+  final void Function(String, double, DateTime) onSubmit;
 
   TransactionForm(this.onSubmit);
 
@@ -27,7 +27,7 @@ class _TransactionFormState extends State<TransactionForm> {
    }
       
    
-   widget.onSubmit(title, value);                  
+   widget.onSubmit(title, value, _selectedDate);                  
   }
 
   _showDatePicker(){

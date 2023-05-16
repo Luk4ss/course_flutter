@@ -5,10 +5,11 @@ import '../models/transaction.dart';
 
 class TransactionList extends StatelessWidget {
   final List<Transaction> transactions;
+  final void Function(String)  onRemove;
 
   static int NUMERO_DE_CASAS_DECIMAIS = 2;
 
-  TransactionList(this.transactions);
+  TransactionList(this.transactions, this.onRemove);
 
   @override
   Widget build(BuildContext context) {
@@ -42,6 +43,7 @@ class TransactionList extends StatelessWidget {
               subtitle: Text(
                 DateFormat('d MM y').format(tr.date)
               ),
+              trailing: IconButton(icon: Icon(Icons.delete), onPressed: () => onRemove(tr.id), color: Theme.of(context).colorScheme.error,),
             ),
           );
         },
